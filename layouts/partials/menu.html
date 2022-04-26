@@ -120,7 +120,8 @@
           {{ end }}
       </a>
       {{ $numberOfPages := (add (len ( where .Pages "Params.hidden" "ne" true )) (len ( where .Sections "Params.hidden" "ne" true ))) }}
-      {{ if ne $numberOfPages 0 }}
+      {{/* removed if ne $numberOfPages 0 */}}
+      {{ if false  }} 
         <ul>
           {{ $currentNode.Scratch.Set "pages" .Pages }}
           {{ if .Sections}}
